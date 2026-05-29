@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best restaurants in Tucson AZ — Local dining guide</title>
+  <meta name="description" content="Best restaurants in Tucson AZ — discover top local dining spots, Sonoran flavors, and tips for finding great restaurants in Tucson, Arizona.">
+  <meta name="theme-color" content="#f97316">
+  <style>
+    /* Reset and base */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; height: 100%; background: #fff; color: #222; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* Layout container */
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 0;
+    }
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .logo {
+      width:44px;
+      height:44px;
+      background: #f97316;
+      border-radius:8px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:700;
+      font-size:18px;
+      flex: 0 0 44px;
+    }
+    .site-title {
+      font-size:18px;
+      font-weight:600;
+      color:#111;
+    }
+
+    /* Main layout: content + sidebar */
+    .wrap {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+
+    main {
+      flex: 1 1 0;
+      background: #fff;
+      padding: 18px;
+      border-radius:10px;
+      box-shadow: 0 6px 18px rgba(6, 6, 6, 0.06);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    aside.sidebar {
+      width: 300px;
+      flex: 0 0 300px;
+      background: #fff;
+      padding: 14px;
+      border-radius:10px;
+      border: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 6px 18px rgba(6, 6, 6, 0.03);
+      height: fit-content;
+    }
+
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 24px;
+      line-height: 1.15;
+      color: #111;
+    }
+
+    .lede {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 14px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+
+    .cta {
+      display:inline-block;
+      background: #f97316;
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-weight:600;
+      text-align:center;
+      margin-top:14px;
+      transition: background .15s ease;
+    }
+    .cta:hover { background: #ea6a10; }
+
+    /* Local Tip box */
+    .tip {
+      background: #fff9f3;
+      border-left: 4px solid #f97316;
+      padding: 12px 14px;
+      margin: 16px 0;
+      border-radius:8px;
+      color: #5a3a16;
+      font-size: 15px;
+    }
+    .tip strong { color:#c65609; }
+
+    /* FAQs */
+    .faqs h3 { font-size:18px; margin-top:18px; color:#111; }
+    .faq { margin: 10px 0; }
+    details { background: #fff; padding: 10px; border-radius:8px; border:1px solid rgba(0,0,0,0.04); }
+    summary { font-weight:600; font-size:15px; cursor:pointer; }
+
+    /* Footer */
+    footer {
+      margin-top: 22px;
+      padding: 18px 0 30px;
+      color: #666;
+      font-size: 14px;
+      text-align: center;
+    }
+    footer a { color: #f97316; font-weight:600; }
+
+    /* Sidebar content */
+    .explore-list { list-style: none; padding:0; margin: 10px 0 0 0; }
+    .explore-list li { margin: 8px 0; }
+    .explore-list a { color: #111; display:block; padding:8px 10px; border-radius:6px; transition: background .12s ease; }
+    .explore-list a:hover { background: rgba(249,115,22,0.06); }
+
+    /* Decorative hero area */
+    .hero {
+      background: linear-gradient(135deg, rgba(249,115,22,0.06), rgba(249,115,22,0.02));
+      padding: 12px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .hero .icon {
+      width:56px;
+      height:56px;
+      background:#fff;
+      border:2px solid rgba(249,115,22,0.15);
+      border-radius:10px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color:#f97316;
+      font-weight:700;
+      font-size:20px;
+    }
+    .hero .text { font-size:15px; color:#333; }
+
+    /* Mobile-first: ensure full-width button and stacked layout */
+    .cta { width: 100%; display:block; box-sizing:border-box; }
+
+    /* Media queries for desktops */
+    @media (min-width: 760px) {
+      html { font-size: 16px; }
+      .page { padding: 28px; }
+      h1 { font-size: 28px; }
+      .wrap { flex-direction: row; }
+      /* Make CTA contained on larger screens */
+      .cta { width: auto; display:inline-block; min-width:260px; }
+    }
+
+    @media (min-width: 1100px) {
+      .page { padding: 36px; }
+      .site-title { font-size:20px; }
+    }
+
+    /* Ensure no horizontal overflow on very small screens */
+    @media (max-width: 374px) {
+      .page { padding-left:12px; padding-right:12px; }
+    }
+
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bonanza Network - Tucson Restaurants",
+    "url": "https://bonanzanetwork.net",
+    "description": "Best restaurants in Tucson AZ — local listings and resources to discover dining, Sonoran cuisine, and community-supported eateries. Bonanza Network supports local churches and nonprofits in Arizona.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Serving Tucson area",
+      "addressLocality": "Tucson",
+      "addressRegion": "AZ",
+      "postalCode": "85701",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type":"City",
+      "name":"Tucson"
+    },
+    "sameAs": [
+      "https://bonanzanetwork.net"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="page" role="document">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">BN</div>
+        <div>
+          <div class="site-title">Bonanza Network</div>
+          <div style="font-size:12px;color:#666;">Local services in Arizona</div>
+        </div>
+      </div>
+      <nav aria-label="Main">
+        <a href="https://bonanzanetwork.net" style="color:#f97316; font-weight:700;">Visit Bonanza Network →</a>
+      </nav>
+    </header>
+
+    <div class="wrap">
+      <main>
+        <div class="hero" role="img" aria-label="Dining map">
+          <div class="icon">☀︎</div>
+          <div class="text">
+            Find the Best restaurants in Tucson AZ — neighborhood guides, flavor notes, and trusted local listings.
+          </div>
+        </div>
+
+        <h1>Best restaurants in Tucson AZ</h1>
+        <p class="lede">Tucson's dining scene blends Sonoran classics, innovative farm-to-table kitchens, and vibrant Mexican flavors. Whether you're exploring downtown, Fourth Avenue, the University area, or the Catalina Foothills, local choices span casual taquerias to upscale tasting menus.</p>
+
+        <p>Start your search by neighborhood and signature dishes — downtown Tucson and Fourth Avenue are great for eclectic small plates and late-night bites, while the Catalina Foothills and Oro Valley host refined restaurants with scenic views. Look for Sonoran influences like chiles, ranch-to-table ingredients and cactus-fruit specials. Many restaurants list menus and reservation options online; if you're visiting during a festival or University of Arizona game, book in advance.</p>
+
+        <p>Bonanza Network highlights local business listings, user reviews, and categories to make it easier to discover family-friendly spots, patio dining, or gluten-free and vegan options. We also showcase community partners — Bonanza Network supports local churches and nonprofits in Arizona, helping keep neighborhood dining connected to community efforts.</p>
+
+        <p>When choosing a place, consider hours (especially for brunch or late-night dining), parking availability, and outdoor seating — Tucson's climate makes early evening patio dining especially pleasant most of the year. Use neighborhood tags and filters to narrow results by cuisine, price range, and accessibility.</p>
+
+        <div class="tip" aria-live="polite">
+          <strong>Local tip:</strong> Monsoon season (July–September) brings dramatic late-afternoon storms — plan patio seating for evenings, or check ahead if a covered patio is available. Late summer is also prickly pear and mesquite season in the Sonoran region; many restaurants feature seasonal cactus fruit desserts and cocktails.
+        </div>
+
+        <a class="cta" href="https://bonanzanetwork.net" title="Find restaurants on Bonanza Network">Find restaurants on Bonanza Network →</a>
+
+        <section class="faqs" aria-labelledby="faqs-heading">
+          <h3 id="faqs-heading">Frequently asked questions</h3>
+
+          <div class="faq">
+            <details>
+              <summary>What neighborhoods have the best dining options in Tucson?</summary>
+              <div style="margin-top:10px;">
+                Downtown and Fourth Avenue are lively for eclectic dining and bars; the University area has casual, student-friendly options; Catalina Foothills and Oro Valley offer upscale restaurants and scenic views. Explore local listings to match cuisine and vibe.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>What Sonoran dishes should I try in Tucson?</summary>
+              <div style="margin-top:10px;">
+                Try Sonoran-style Mexican dishes, regional uses of chiles and mesquite, and local specialties like the Sonoran hot dog, carne seca, and seasonal cactus-fruit desserts. Many chefs highlight local produce and Southwestern flavors.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>Do restaurants require reservations for weekends or events?</summary>
+              <div style="margin-top:10px;">
+                Weekends, holidays, and UArizona game days can be busy — reservations are recommended for popular spots. Check online listings or call ahead; Bonanza Network provides links to reservation pages when available.
+              </div>
+            </details>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="sidebar" aria-labelledby="explore-heading">
+        <h3 id="explore-heading" style="margin-top:0;color:#111;">Explore More Arizona Local Services</h3>
+        <p style="font-size:14px;color:#444;margin:6px 0 12px 0;">Discover related local services across Arizona — from catering and event venues to community groups and volunteer opportunities.</p>
+        <ul class="explore-list">
+          <li><a href="https://bonanzanetwork.net/categories/catering">Catering & Event Services</a></li>
+          <li><a href="https://bonanzanetwork.net/categories/venues">Private Dining & Venues</a></li>
+          <li><a href="https://bonanzanetwork.net/categories/food-trucks">Food Trucks & Pop-ups</a></li>
+          <li><a href="https://bonanzanetwork.net/categories/nonprofits">Local Churches & Nonprofits</a></li>
+        </ul>
+
+        <div style="margin-top:14px; padding-top:12px; border-top:1px solid rgba(0,0,0,0.04); font-size:14px; color:#444;">
+          <strong>Community note:</strong>
+          <p style="margin:8px 0 0 0;">Bonanza Network supports local churches and nonprofits in Arizona — find community-focused restaurants and benefit nights in our listings.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© <span id="year"></span> Bonanza Network. All rights reserved. <a href="https://bonanzanetwork.net">bonanzanetwork.net</a></div>
+    </footer>
+  </div>
+
+  <script>
+    // Insert current year in footer
+    (function(){ var y = new Date().getFullYear(); var el = document.getElementById('year'); if(el) el.textContent = y; })();
+  </script>
+</body>
+</html>
